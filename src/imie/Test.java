@@ -6,14 +6,15 @@ public class Test {
 	
 	public static void main(String[] args) 
 	{		
-		int a = 1;
+		int a ;
 		
-		while(a != 4)
+		do
 		{
 			listerMenu();
 			a = saisirEntier();
 			menu2(a);
 		}
+		while(a != 4);
 	}
 	
 	public static int saisirEntier()
@@ -63,6 +64,44 @@ public class Test {
 			default:
 				System.out.println("Vous avez choisi une mauvaise option ! Veuillez saisir un chiffre entre 1 et 4.");
 				break;
+		}
+	}
+	
+	public static void menu()
+	{
+		Scanner sc = new Scanner(System.in);
+		int choix = 1;
+		while(choix != 4)
+		{
+			System.out.println("######### MENU ##########");
+			System.out.println("1 - Addition");
+			System.out.println("2 - Soustraction");
+			System.out.println("3 - Multiplication");
+			System.out.println("4 - Rien, je veux glander !");
+			System.out.println("\nQue voulez-vous faire : ");
+
+
+			choix = sc.nextInt();
+
+			switch(choix)
+			{
+			case 1:
+				System.out.println("Vous avez choisi une addition !");
+				break;
+			case 2:
+				System.out.println("Vous avez choisi une soustraction !");
+				break;
+			case 3:
+				System.out.println("Vous avez choisi une multiplication !");
+				break;
+			case 4:
+				System.out.println("Vous voulez glander ? Aurevoir !");
+				break;
+			default:
+				System.out.println("Vous avez choisi une mauvaise option ! Veuillez saisir un chiffre entre 1 et 4.");
+				break;
+			}
+
 		}
 	}
 }
