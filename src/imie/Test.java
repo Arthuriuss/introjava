@@ -6,15 +6,17 @@ public class Test {
 	
 	public static void main(String[] args) 
 	{		
-		int a ;
+//		int a;//arthuriuss !!!
+//		
+//		do
+//		{
+//			listerMenu();
+//			a = saisirEntier();
+//			menu2(a);
+//		}
+//		while(a != 4);
 		
-		do
-		{
-			listerMenu();
-			a = saisirEntier();
-			menu2(a);
-		}
-		while(a != 4);
+		notes();
 	}
 	
 	public static int saisirEntier()
@@ -104,4 +106,43 @@ public class Test {
 
 		}
 	}
+	
+	public static void notes()
+	{
+		//double [][] notesClasse = { {5,3,15}, {20,15,6}, {18,15,10}, {9,15,14}, {15,10,8} };
+		double som, moy;
+		Scanner sc = new Scanner(System.in);
+		
+		double [][] notesClasse = new double[5][3];
+		for(int i=0; i<notesClasse.length; i++)
+		{
+			System.out.println("Saisie des notes de l'élève " + (i+1));
+			//Parcours des 3 notes de l'élève i
+			for(int j=0; j<notesClasse[i].length; j++)
+			{
+				System.out.println("Note n°" + (j+1)+ " ");
+				notesClasse[i][j] = sc.nextDouble();
+			}
+		}
+		
+		//Parcours des 5 lignes (les 5 élèves)
+		for(int i=0; i<notesClasse.length; i++)
+		{
+			som = 0;
+			//Parcours des 3 notes de l'élève i
+			for(int j=0; j<notesClasse[i].length; j++)
+			{
+				som = som + notesClasse[i][j]; //addition des notes de l'élève i
+			}
+			moy = (double)Math.round((som/notesClasse[i].length)*10)/10; //calcule de la moyenne de l'élève i
+			//moy = som/notesClasse[i].length; //calcule de la moyenne de l'élève i
+			System.out.println("La moyenne de l'élève " + (i+1) + " est : " + moy);
+		}
+	}
+	
+	
+	
+	
+	
+	
 }
