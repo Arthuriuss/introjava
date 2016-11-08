@@ -6,17 +6,10 @@ public class Test {
 	
 	public static void main(String[] args) 
 	{		
-//		int a;//arthuriuss !!!
-//		
-//		do
-//		{
-//			listerMenu();
-//			a = saisirEntier();
-//			menu2(a);
-//		}
-//		while(a != 4);
+		int a = 1; //ma modif
 		
 		notes();
+		//ajout de ça !
 	}
 	
 	public static int saisirEntier()
