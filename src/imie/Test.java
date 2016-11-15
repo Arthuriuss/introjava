@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Test {
-	
+	//nouvelle branche
 	public static void main(String[] args) 
 	{		
 		int a = 1; //ma modif
